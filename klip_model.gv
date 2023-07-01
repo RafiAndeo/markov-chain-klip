@@ -1,0 +1,131 @@
+// Klip Application Markov Chain Model
+digraph {
+	Start
+	v_Home_Page
+	v_Login_Page
+	v_Register_Page
+	v_Dashboard_User_Page
+	v_Dashboard_Admin_Page
+	v_Product_Details_Page
+	v_Cart_Page
+	v_Success_Checkout_Page
+	v_My_Transaction_Page
+	v_Show_My_Transaction_Page
+	v_Dashboard_Admin_Product_Page
+	v_Create_Product_Page
+	v_Gallery_Product_Page
+	v_Upload_Photos_Page
+	v_Edit_Product_Page
+	v_Dashboard_Admin_Transaction_Page
+	v_Show_Transaction_Page
+	v_Edit_Transaction_Page
+	v_Dashboard_Admin_User_Page
+	v_Edit_User_Page
+	End
+	Start -> v_Home_Page [label=1.0]
+	v_Home_Page -> v_Login_Page [label=0.3]
+	v_Home_Page -> v_Register_Page [label=0.3]
+	v_Home_Page -> v_Product_Details_Page [label=0.2]
+	v_Home_Page -> v_Cart_Page [label=0.2]
+	v_Login_Page -> v_Dashboard_User_Page [label=0.8]
+	v_Login_Page -> v_Dashboard_Admin_Page [label=0.2]
+	v_Register_Page -> v_Dashboard_User_Page [label=1.0]
+	v_Dashboard_User_Page -> v_Home_Page [label=0.6]
+	v_Dashboard_User_Page -> v_My_Transaction_Page [label=0.4]
+	v_Dashboard_Admin_Page -> v_Home_Page [label=0.6]
+	v_Dashboard_Admin_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Dashboard_Admin_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Dashboard_Admin_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Dashboard_Admin_Page -> v_My_Transaction_Page [label=0.1]
+	v_Product_Details_Page -> v_Home_Page [label=0.5]
+	v_Product_Details_Page -> v_Cart_Page [label=0.3]
+	v_Product_Details_Page -> v_Dashboard_User_Page [label=0.1]
+	v_Product_Details_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Cart_Page -> v_Home_Page [label=0.3]
+	v_Cart_Page -> v_Success_Checkout_Page [label=0.5]
+	v_Cart_Page -> v_Dashboard_User_Page [label=0.1]
+	v_Cart_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Success_Checkout_Page -> v_Home_Page [label=0.3]
+	v_Success_Checkout_Page -> v_Cart_Page [label=0.1]
+	v_Success_Checkout_Page -> v_Dashboard_User_Page [label=0.3]
+	v_Success_Checkout_Page -> v_Dashboard_Admin_Page [label=0.3]
+	v_My_Transaction_Page -> v_Dashboard_User_Page [label=0.1]
+	v_My_Transaction_Page -> v_Show_My_Transaction_Page [label=0.2]
+	v_My_Transaction_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_My_Transaction_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_My_Transaction_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_My_Transaction_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_My_Transaction_Page -> End [label=0.3]
+	v_Show_My_Transaction_Page -> v_My_Transaction_Page [label=0.1]
+	v_Show_My_Transaction_Page -> v_Dashboard_User_Page [label=0.1]
+	v_Show_My_Transaction_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Show_My_Transaction_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Show_My_Transaction_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Show_My_Transaction_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Show_My_Transaction_Page -> End [label=0.4]
+	v_Dashboard_Admin_Product_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Dashboard_Admin_Product_Page -> v_My_Transaction_Page [label=0.1]
+	v_Dashboard_Admin_Product_Page -> v_Create_Product_Page [label=0.2]
+	v_Dashboard_Admin_Product_Page -> v_Gallery_Product_Page [label=0.2]
+	v_Dashboard_Admin_Product_Page -> v_Edit_Product_Page [label=0.1]
+	v_Dashboard_Admin_Product_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Dashboard_Admin_Product_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Dashboard_Admin_Product_Page -> End [label=0.1]
+	v_Create_Product_Page -> v_Dashboard_Admin_Product_Page [label=0.5]
+	v_Create_Product_Page -> v_My_Transaction_Page [label=0.1]
+	v_Create_Product_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Create_Product_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Create_Product_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Create_Product_Page -> End [label=0.1]
+	v_Gallery_Product_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Gallery_Product_Page -> v_My_Transaction_Page [label=0.1]
+	v_Gallery_Product_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Gallery_Product_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Gallery_Product_Page -> Upload_Photos_Page [label=0.5]
+	v_Gallery_Product_Page -> End [label=0.1]
+	v_Upload_Photos_Page -> v_Gallery_Product_Page [label=0.4]
+	v_Upload_Photos_Page -> v_My_Transaction_Page [label=0.1]
+	v_Upload_Photos_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Upload_Photos_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Upload_Photos_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Upload_Photos_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Upload_Photos_Page -> End [label=0.1]
+	v_Edit_Product_Page -> v_Dashboard_Admin_Product_Page [label=0.5]
+	v_Edit_Product_Page -> v_My_Transaction_Page [label=0.1]
+	v_Edit_Product_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Edit_Product_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Edit_Product_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Edit_Product_Page -> End [label=0.1]
+	v_Dashboard_Admin_Transaction_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Dashboard_Admin_Transaction_Page -> v_My_Transaction_Page [label=0.1]
+	v_Dashboard_Admin_Transaction_Page -> v_Show_Transaction_Page [label=0.2]
+	v_Dashboard_Admin_Transaction_Page -> v_Edit_Transaction_Page [label=0.3]
+	v_Dashboard_Admin_Transaction_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Dashboard_Admin_Transaction_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Dashboard_Admin_Transaction_Page -> End [label=0.1]
+	v_Show_Transaction_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Show_Transaction_Page -> v_My_Transaction_Page [label=0.1]
+	v_Show_Transaction_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Show_Transaction_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Show_Transaction_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Show_Transaction_Page -> End [label=0.5]
+	v_Edit_Transaction_Page -> v_Dashboard_Admin_Transaction_Page [label=0.5]
+	v_Edit_Transaction_Page -> v_My_Transaction_Page [label=0.1]
+	v_Edit_Transaction_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Edit_Transaction_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Edit_Transaction_Page -> v_Dashboard_Admin_User_Page [label=0.1]
+	v_Edit_Transaction_Page -> End [label=0.1]
+	v_Dashboard_Admin_User_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Dashboard_Admin_User_Page -> v_My_Transaction_Page [label=0.1]
+	v_Dashboard_Admin_User_Page -> v_Edit_User_Page [label=0.5]
+	v_Dashboard_Admin_User_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Dashboard_Admin_User_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Dashboard_Admin_User_Page -> End [label=0.1]
+	v_Edit_User_Page -> v_Dashboard_Admin_User_Page [label=0.5]
+	v_Edit_User_Page -> v_My_Transaction_Page [label=0.1]
+	v_Edit_User_Page -> v_Dashboard_Admin_Page [label=0.1]
+	v_Edit_User_Page -> v_Dashboard_Admin_Product_Page [label=0.1]
+	v_Edit_User_Page -> v_Dashboard_Admin_Transaction_Page [label=0.1]
+	v_Edit_User_Page -> End [label=0.1]
+	End -> End [label=1.0]
+}
